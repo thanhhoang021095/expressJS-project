@@ -1,5 +1,8 @@
-.card.text-center
-  .card-header Hello #{name}
-  .card-body
-    .card-title Hello World, this is PugHtml
-  .card-footer.text-muted powered by Bibooki
+extends ./layouts/layout.pug
+
+block content
+  div.container.d-flex.flex-column.align-items-center.justify-content-center
+    .h2.mb-5.text-info Hello #{name}
+    img(src="/images/cover.jpg", alt="cover").h-100
+    a(href="/users")
+      .btn.btn-info.mt-5 Explore My Web

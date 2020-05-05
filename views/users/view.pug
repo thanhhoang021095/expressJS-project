@@ -1,4 +1,11 @@
-h2 User Info
+extends ../layouts/layout.pug
 
-h6 Name
-    span= user.name
+block content
+    h3 User Info
+    table.table
+    tr
+        th Name
+        th Phone
+    tr
+        td= user.name
+        td= user.phone

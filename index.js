@@ -5,6 +5,7 @@ const port = 8080;
 
 const userRouter = require("./routes/user.route");
 
+app.use(express.static( __dirname + "\\public"))
 app.set("view engine", "pug");
 app.set("views", "./views");
 

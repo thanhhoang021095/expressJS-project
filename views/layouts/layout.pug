@@ -1,0 +1,28 @@
+html
+  head
+    title My Express App
+    link(rel="stylesheet", href="/styles/style.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    script(src='https://kit.fontawesome.com/5696f9ed74.js', crossorigin='anonymous')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='/') Coders
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href='/') Home
+            li.nav-item
+              a.nav-link(href='/users') User
+            li.nav-item
+              a.nav-link(href='/products') Products
+
+        if user			
+          h3= user.name	
+
+        button.btn.btn-danger.my-2.my-sm-0.px-3.ml-3 Cart
+          span.rounded-circle.badge.badge-light.ml-2 4			
+        
+    .container.p-3
+      block content

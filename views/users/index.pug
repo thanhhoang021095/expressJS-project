@@ -1,11 +1,29 @@
-.card.text-center
-  .h2 User List
-  a(href="/users/create") Create new user
-  form(action="/users/search", method="get")
-    input(type="text", name="name")
-    button search
-  ul
-    each user in userList
-      li
-        span= user.name
-        a(href=`/users/${user.uid}`) view info
+extends ../layouts/layout.pug
+
+block content
+  .container.text-center
+    .h2 User List
+    a(href="/users/create")
+      .btn.btn-primary.mb-2
+        i.fas.fa-user-plus.mr-2(style="font-size: 1.2rem")
+        span(style="font-size: 1.2rem;") Create new user
+    form(action="/users/search", method="get")
+      .input-group.mb-3
+        .input-group-prepend
+          span#inputGroup-sizing-default.input-group-text Name
+        input.form-control(type='text')
+        button(style="width: 12%; font-size: 1.2rem").btn.btn-success.ml-1 
+          i.fas.fa-search.mr-2(style="font-size: 1.2rem;")
+          span(style="font-size: 1.2rem;") Search
+
+    table.table
+      tr
+        th Name
+        th Phone
+        th View Profile
+      each user in userList
+        tr
+          td= user.name
+          td= user.phone
+          td
+            a(href=`/users/${user.uid}`).ml-3 view info

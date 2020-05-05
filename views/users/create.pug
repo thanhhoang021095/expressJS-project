@@ -1,7 +1,18 @@
-.card.text-center
+extends ../layouts/layout.pug
+
+block content
     .h2 Create User
-    form(action="/users/create", method="post")
-        label Name
-        input(name="name", type="text")
-        //- input(label="age" type="text")
-        button create
+    //- form(action="/users/create", method="post")
+    //-     label Name
+    //-     input(name="name", type="text")
+    //-     //- input(label="age" type="text")
+    //-     button create
+    form(action="/users/create", method="POST")
+        .form-group
+            label(for="name") Name
+            input#name.form-control(name="name" type="text", style="width: 50%")
+
+        .form-group
+            label(for="phone") Phone
+            input#phone.form-control(name="phone" type="text", style="width: 50%")
+        button.btn.btn-primary Create
