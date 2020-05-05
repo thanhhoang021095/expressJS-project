@@ -1,0 +1,11 @@
+.card.text-center
+  .h2 User List
+  a(href="/users/create") Create new user
+  form(action="/users/search", method="get")
+    input(type="text", name="name")
+    button search
+  ul
+    each user in userList
+      li
+        span= user.name
+        a(href=`/users/${user.uid}`) view info

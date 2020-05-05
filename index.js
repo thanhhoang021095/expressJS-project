@@ -1,11 +1,24 @@
-const express = require('express');
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 8080;
 
-app.get('/', (req, res) => {
-    res.send('abc')
-})
+const userRouter = require("./routes/user.route");
+
+app.set("view engine", "pug");
+app.set("views", "./views");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.render("index", {
+    name: "hoang",
+  });
+});
+
+app.use("/users", userRouter);
 
 app.listen(port, () => {
-    console.log(`Server is running at port: ${port}`)
-})
+  console.log(`Server is running at port: ${port}`);
+});
