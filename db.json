@@ -2,28 +2,10 @@
   "userList": [
     {
       "name": "tu",
-      "uid": "Gp9-ENZxz"
-    },
-    {
-      "name": "chinh",
-      "uid": "dsJV6oNzu"
-    },
-    {
-      "name": "hung",
-      "uid": "e6RSjPClt"
-    },
-    {
-      "name": "hoang",
-      "uid": "BEnYzYJuH"
-    },
-    {
-      "name": "ha",
-      "uid": "EPPY_7gcr"
-    },
-    {
-      "name": "tuan",
-      "phone": "12324242",
-      "uid": "8iFlps2NO"
+      "phone": "01928123242",
+      "uid": "J4WvaFUk2",
+      "username": "tudo",
+      "password": "123"
     }
   ]
 }
