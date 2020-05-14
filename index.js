@@ -7,6 +7,7 @@ const port = 8080;
 
 const userRouter = require("./routes/user.route");
 const authRouter = require("./routes/auth.route");
+const productRouter = require("./routes/product.route");
 
 // middleware
 const authMiddleware = require("./middlewares/auth.middleware");
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", authMiddleware.requireAuth, userRouter);
+app.use("/products", productRouter);
 app.use("/login", authRouter);
 
 app.listen(port, () => {

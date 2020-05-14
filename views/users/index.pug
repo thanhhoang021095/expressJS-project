@@ -7,11 +7,11 @@ block content
       .btn.btn-primary.mb-2
         i.fas.fa-user-plus.mr-2(style="font-size: 1.2rem")
         span(style="font-size: 1.2rem;") Create new user
-    form(action="/users/search", method="get")
+    form(action="/users/search", method="GET")
       .input-group.mb-3
         .input-group-prepend
           span#inputGroup-sizing-default.input-group-text Name
-        input.form-control(type='text')
+        input.form-control(type='text', name="name")
         button(style="width: 12%; font-size: 1.2rem").btn.btn-success.ml-1 
           i.fas.fa-search.mr-2(style="font-size: 1.2rem;")
           span(style="font-size: 1.2rem;") Search
