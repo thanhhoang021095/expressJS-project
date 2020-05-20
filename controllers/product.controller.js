@@ -16,3 +16,13 @@ module.exports.getProducts = (req,res) => {
         productList: productList.value().slice(start,end)
     })
 }
+
+module.exports.searchProduct = (req, res) => {
+    const name = req.query.name;
+    const matchedProduct = productList.value().filter(product => {
+        return product.name.toLowerCase().indexOf(name.toLowerCase()) !== -1
+    })
+    res.render("products/index", {
+        productList: matchedProduct
+    })
+}
