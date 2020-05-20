@@ -25,6 +25,7 @@ module.exports.createUserForm = (req, res) => {
 module.exports.createUserRequest = (req, res) => {
   const uid = shortId.generate();
   req.body.uid = uid;
+	req.body.avatar = req.file.path.split('\\').slice(1).join('/');
   userList.push(req.body).write();
   res.redirect("/users");
 };

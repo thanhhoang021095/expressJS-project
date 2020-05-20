@@ -4,8 +4,11 @@ block content
     h3 User Info
     table.table
         tr
+            th Avatar
             th Name
             th Phone
-        tr
+        tr  
+            td
+                img(src=user.avatar, width="45")
             td= user.name
             td= user.phone
