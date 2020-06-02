@@ -720,5 +720,19 @@
       "description": "semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque",
       "price": 99
     }
+  ],
+  "sessions": [
+    {
+      "id": "1SdAm9rm2"
+    },
+    {
+      "id": "zX4s2t7dK",
+      "cart": {
+        "000f8900-f40b-4b1b-8381-722f521c362f": 4,
+        "4904c4a7-6651-49de-a95c-316cab03845c": 2,
+        "2566a9b8-63e4-4985-8ba5-7d2c1adb50b4": 1,
+        "c19f9797-6540-4d18-923d-a68946f1b0f0": 3
+      }
+    }
   ]
 }
